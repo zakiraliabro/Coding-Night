@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialApp - Feed</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">SocialApp</div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search posts...">
+            </div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="btn btn-ghost" title="Toggle Dark Mode">🌙</button>
+                <span id="userName" class="user-name">Welcome, User</span>
+                <button id="logoutBtn" class="btn btn-ghost text-danger">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="card create-post">
+            <textarea id="postContent" placeholder="What's on your mind?" rows="3"></textarea>
+            <div class="post-actions">
+                <input type="url" id="postImage" placeholder="Image URL (optional)" class="form-input"
+                    style="flex: 1; margin-right: 1rem;">
+                <button id="createPostBtn" class="btn btn-primary">Post</button>
+            </div>
+        </div>
+
+        <div class="feed-controls">
+            <select id="sortSelect" class="form-input" style="width: auto;">
+                <option value="latest">Latest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="mostLiked">Most Liked</option>
+            </select>
+        </div>
+
+        <div id="feedContainer" class="feed-container">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
